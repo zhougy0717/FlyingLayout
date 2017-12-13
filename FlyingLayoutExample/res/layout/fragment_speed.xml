@@ -46,7 +46,9 @@
                 android:text="To reset, tap outside of boundary." />
         </LinearLayout>
 
-        <FrameLayout>
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
         </FrameLayout>
 
         <TextView

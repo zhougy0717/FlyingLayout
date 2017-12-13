@@ -35,7 +35,8 @@ public class MainActivity extends ActionBarActivity {
 				new ArrayAdapter<String>(actionBar.getThemedContext(),
 						android.R.layout.simple_list_item_1,
 						android.R.id.text1, new String[] { "Speed", "Padding",
-								"Enable X/Y" }), new OnNavigationListener() {
+								"Enable X/Y" }),
+				new OnNavigationListener() {
 					@Override
 					public boolean onNavigationItemSelected(int itemPosition,
 							long itemId) {
@@ -58,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
 							break;
 						}
 						getSupportFragmentManager().beginTransaction()
-								.replace(R.id.container, fragment).commit();
+								.replace(R.id.container, fragment).commitAllowingStateLoss();
 						return true;
 					}
 				});
